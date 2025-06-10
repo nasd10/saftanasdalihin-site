@@ -1,6 +1,6 @@
 // src/components/ContactSection.jsx
 import React, { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 function ContactSection() {
   const [formData, setFormData] = useState({
@@ -52,11 +52,11 @@ function ContactSection() {
             <div className="space-y-6 text-gray-300 text-lg">
               <div className="flex items-center space-x-4">
                 <FaEnvelope className="text-violet-500 text-2xl" />
-                <span>your.email@example.com</span>
+                <span>saftanasdalihin@gmail.com</span>
               </div>
               <div className="flex items-center space-x-4">
                 <FaPhone className="text-violet-500 text-2xl" />
-                <span>+62 812-3456-7890</span>
+                <span>+62 851-5667-8549</span>
               </div>
               <div className="flex items-center space-x-4">
                 <FaMapMarkerAlt className="text-violet-500 text-2xl" />
@@ -65,20 +65,20 @@ function ContactSection() {
             </div>
 
             <div className="flex justify-start space-x-6 mt-10">
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.instagram.com/safta_nas/" target="_blank" rel="noopener noreferrer"
                  className="text-gray-300 hover:text-violet-500 text-3xl transition duration-300 transform hover:scale-110"
-                 title="LinkedIn">
-                <FaLinkedin />
+                 title="Instagram">
+                <FaInstagram />
               </a>
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/nasdthestudent" target="_blank" rel="noopener noreferrer"
                  className="text-gray-300 hover:text-violet-500 text-3xl transition duration-300 transform hover:scale-110"
                  title="GitHub">
                 <FaGithub />
               </a>
-              <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/safta-nasdalihin-819168249/" target="_blank" rel="noopener noreferrer"
                  className="text-gray-300 hover:text-violet-500 text-3xl transition duration-300 transform hover:scale-110"
-                 title="Twitter">
-                <FaTwitter />
+                 title="LinkedIn">
+                <FaLinkedin />
               </a>
             </div>
           </div>

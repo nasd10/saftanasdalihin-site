@@ -53,13 +53,13 @@ function Navbar() {
 
       {/* Bagian Kanan: Sosial Media (Desktop) */}
       <div className="hidden md:flex flex-none space-x-6 lg:space-x-8">
-        <a href="https://instagram.com/your_instagram" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-xl transition duration-300">
+        <a href="https://instagram.com/safta_nas" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-xl transition duration-300">
           <FaInstagram />
         </a>
-        <a href="https://github.com/your_github" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-xl transition duration-300">
+        <a href="https://github.com/nasdthestudent" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-xl transition duration-300">
           <FaGithub />
         </a>
-        <a href="https://linkedin.com/in/your_linkedin" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-xl transition duration-300">
+        <a href="https://www.linkedin.com/in/safta-nasdalihin-819168249/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-xl transition duration-300">
           <FaLinkedin />
         </a>
       </div>

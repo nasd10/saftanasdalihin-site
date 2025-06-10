@@ -6,34 +6,27 @@ import { SiTailwindcss, SiNextdotjs, SiMongodb, SiFirebase } from 'react-icons/s
 // Data dummy untuk pengalaman dan pendidikan
 const experiences = [
   {
-    id: 1,
-    title: "Full-stack Developer",
-    company: "Tech Solutions Inc.",
-    duration: "Jan 2022 - Present",
-    description: "Developed and maintained full-stack web applications using React, Node.js, and MongoDB. Implemented RESTful APIs and ensured high performance.",
-  },
+      id: 1,
+      title: "",
+      company: "",
+      duration: "",
+      description: "",
+    },
   {
     id: 2,
-    title: "Front-end Intern",
-    company: "Creative Agency",
-    duration: "Aug 2021 - Dec 2021",
-    description: "Assisted in building responsive user interfaces with HTML, CSS, and JavaScript. Collaborated with design team to implement UI/UX mockups.",
+    title: "",
+    company: "",
+    duration: "",
+    description: "",
   },
 ];
 
 const education = [
   {
     id: 1,
-    degree: "Bachelor of Computer Science",
-    institution: "Bandung Institute of Technology",
-    year: "2018 - 2022",
-    description: "Focused on software engineering, data structures, and algorithms. Graduated with honors.",
-  },
-  {
-    id: 2,
-    degree: "High School Diploma",
-    institution: "SMA Negeri 3 Bandung",
-    year: "2015 - 2018",
+    degree: "High School ",
+    institution: "SMA Alfa Centauri Bandung",
+    year: "2018 - 2021",
     description: "Majored in Natural Sciences.",
   },
 ];

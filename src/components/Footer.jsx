@@ -12,13 +12,13 @@ function Footer() {
           &copy; {currentYear} Safta. All rights reserved.
         </div>
         <div className="flex space-x-6 text-2xl">
-          <a href="https://instagram.com/your_instagram" target="_blank" rel="noopener noreferrer" className="hover:text-custom-violet transition duration-300">
+          <a href="https://instagram.com/safta_nas" target="_blank" rel="noopener noreferrer" className="hover:text-custom-violet transition duration-300">
             <FaInstagram />
           </a>
-          <a href="https://github.com/your_github" target="_blank" rel="noopener noreferrer" className="hover:text-custom-violet transition duration-300">
+          <a href="https://github.com/nasdthestudent" target="_blank" rel="noopener noreferrer" className="hover:text-custom-violet transition duration-300">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/your_linkedin" target="_blank" rel="noopener noreferrer" className="hover:text-custom-violet transition duration-300">
+          <a href="https://www.linkedin.com/in/safta-nasdalihin-819168249/" target="_blank" rel="noopener noreferrer" className="hover:text-custom-violet transition duration-300">
             <FaLinkedin />
           </a>
         </div>
