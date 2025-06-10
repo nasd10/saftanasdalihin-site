@@ -35,7 +35,7 @@ function MiniContactSection() {
         {/* Social Media Icons - Opsional, jika ingin tetap ada di mini-contact */}
         <div className="flex justify-center space-x-6 mt-12 animate-fade-in-up delay-300">
           <a
-            href="https://instagram.com/yourusername" // Ganti dengan GitHub Anda
+            href="https://instagram.com/safta_nas" // Ganti dengan GitHub Anda
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-violet-500 text-3xl transition duration-300 transform hover:scale-110"
@@ -44,7 +44,7 @@ function MiniContactSection() {
             <FaInstagram />
           </a>
           <a
-            href="https://github.com/yourusername" // Ganti dengan GitHub Anda
+            href="https://github.com/nasdthestudent" // Ganti dengan GitHub Anda
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-violet-500 text-3xl transition duration-300 transform hover:scale-110"
@@ -53,7 +53,7 @@ function MiniContactSection() {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/yourprofile" // Ganti dengan LinkedIn Anda
+            href="https://linkedin.com/in/saftanasdalihin" // Ganti dengan LinkedIn Anda
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-violet-500 text-3xl transition duration-300 transform hover:scale-110"
@@ -62,7 +62,7 @@ function MiniContactSection() {
             <FaLinkedin />
           </a>
           <a
-            href="mailto:your.email@example.com" // Ganti dengan email Anda
+            href="mailto:saftanasdalihin@gmail.com" // Ganti dengan email Anda
             className="text-gray-300 hover:text-violet-500 text-3xl transition duration-300 transform hover:scale-110"
             title="Email Me"
           >
