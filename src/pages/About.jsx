@@ -87,16 +87,10 @@ function About() {
             {/* Contoh Skill Card */}
             {[
               { icon: <FaReact />, name: 'React.js', color: 'text-blue-400' },
-              { icon: <SiNextdotjs />, name: 'Next.js', color: 'text-gray-300' },
               { icon: <FaJsSquare />, name: 'JavaScript', color: 'text-yellow-400' },
               { icon: <FaHtml5 />, name: 'HTML5', color: 'text-orange-500' },
               { icon: <FaCss3Alt />, name: 'CSS3', color: 'text-blue-500' },
               { icon: <SiTailwindcss />, name: 'Tailwind CSS', color: 'text-cyan-400' },
-              { icon: <FaNodeJs />, name: 'Node.js', color: 'text-green-500' },
-              { icon: <SiMongodb />, name: 'MongoDB', color: 'text-green-600' },
-              { icon: <FaPython />, name: 'Python', color: 'text-blue-600' },
-              { icon: <SiFirebase />, name: 'Firebase', color: 'text-yellow-600' },
-              { icon: <FaFigma />, name: 'Figma', color: 'text-pink-500' },
             ].map((skill, i) => (
               <div key={i} className="flex flex-col items-center p-4 bg-gray-700 rounded-lg transform hover:scale-105 transition-transform duration-200">
                 <div className={`text-5xl mb-3 ${skill.color}`}>{skill.icon}</div>
