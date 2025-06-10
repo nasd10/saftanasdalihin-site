@@ -59,7 +59,7 @@ function Navbar() {
         <a href="https://github.com/nasdthestudent" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-xl transition duration-300">
           <FaGithub />
         </a>
-        <a href="https://www.linkedin.com/in/safta-nasdalihin-819168249/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-xl transition duration-300">
+        <a href="https://www.linkedin.com/in/saftanasdalihin/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-xl transition duration-300">
           <FaLinkedin />
         </a>
       </div>

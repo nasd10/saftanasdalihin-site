@@ -75,7 +75,7 @@ function ContactSection() {
                  title="GitHub">
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/safta-nasdalihin-819168249/" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/saftanasdalihin/" target="_blank" rel="noopener noreferrer"
                  className="text-gray-300 hover:text-violet-500 text-3xl transition duration-300 transform hover:scale-110"
                  title="LinkedIn">
                 <FaLinkedin />

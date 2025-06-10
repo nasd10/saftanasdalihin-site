@@ -18,7 +18,7 @@ function Footer() {
           <a href="https://github.com/nasdthestudent" target="_blank" rel="noopener noreferrer" className="hover:text-custom-violet transition duration-300">
             <FaGithub />
           </a>
-          <a href="https://www.linkedin.com/in/safta-nasdalihin-819168249/" target="_blank" rel="noopener noreferrer" className="hover:text-custom-violet transition duration-300">
+          <a href="https://www.linkedin.com/in/saftanasdalihin/" target="_blank" rel="noopener noreferrer" className="hover:text-custom-violet transition duration-300">
             <FaLinkedin />
           </a>
         </div>
