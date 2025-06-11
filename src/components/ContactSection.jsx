@@ -30,7 +30,7 @@ function ContactSection() {
   return (
     <section id="contact" className="relative py-20 px-4 md:px-12 text-white overflow-hidden bg-gray-900">
       {/* BACKGROUND GRADIENT - Menggunakan warna Tailwind bawaan (konsisten dengan ProjectPreviewSection) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-violet-900 z-0"></div>
+      <div className="absolute h-full inset-0 rounded-3xl bg-gradient-to-br from-gray-900 via-gray-950 to-violet-900 z-0"></div>
 
       {/* BLOB ANIMASI (jika nanti berfungsi) */}
       <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-15 animate-blob z-0 animation-delay-4000"></div>

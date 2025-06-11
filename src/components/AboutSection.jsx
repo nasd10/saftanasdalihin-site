@@ -1,7 +1,7 @@
 // src/components/AboutSection.jsx
 import React from 'react';
-
 import { FaLaptopCode, FaRocket, FaLightbulb, FaUserGraduate } from 'react-icons/fa'; // Contoh ikon, Anda bisa menambah/mengganti
+import { Link } from 'react-router-dom'; // Jika menggunakan React Router untuk navigasi
 
 function AboutSection() {
   // Data dummy untuk preview (ini bisa Anda ganti nanti)
