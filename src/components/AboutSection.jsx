@@ -7,22 +7,22 @@ function AboutSection() {
   // Data dummy untuk preview (ini bisa Anda ganti nanti)
   const aboutPreviews = [
     {
-      icon: <FaLaptopCode />,
-      title: "Skills & Expertise",
-      description: "Proficient in modern web technologies, I craft elegant solutions for complex challenges. See my full skill set on the About page.",
-      link: "/about.html" // Link ke sub-bagian di About page
-    },
-    {
       icon: <FaUserGraduate />,
       title: "My Journey",
       description: "From academic pursuits to professional endeavors, my path has been driven by continuous learning and growth. Discover my full story.",
-      link: "/about.html" // Link ke sub-bagian di About page
+      link: "/about.html#journey" // Link ke sub-bagian di About page
+    },
+    {
+      icon: <FaLaptopCode />,
+      title: "Skills & Expertise",
+      description: "Proficient in modern web technologies, I craft elegant solutions for complex challenges. See my full skill set on the About page.",
+      link: "/about.html#skills" // Link ke sub-bagian di About page
     },
     {
       icon: <FaRocket />,
       title: "Philosophy",
       description: "I believe in clean code, innovative design, and user-centric development. My approach combines creativity with functionality.",
-      link: "/about.html" // Link ke sub-bagian di About page
+      link: "/about.html#philosophy" // Link ke sub-bagian di About page
     }
   ];
 
