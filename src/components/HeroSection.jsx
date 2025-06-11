@@ -33,13 +33,13 @@ function HeroSection() {
         </h1>
         <p className="text-xl md:text-2xl italic mb-10 animate-fade-in-up delay-200">"Take it seriously, aim higher"</p>
         <div className="flex justify-center space-x-8 animate-fade-in-up delay-400">
-          <a href="https://instagram.com/your_instagram" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-3xl transition duration-300">
+          <a href="https://instagram.com/safta_nas" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-3xl transition duration-300">
             <FaInstagram />
           </a>
-          <a href="https://github.com/your_github" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-3xl transition duration-300">
+          <a href="https://github.com/nasdthestudent" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-3xl transition duration-300">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/your_linkedin" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-3xl transition duration-300">
+          <a href="https://linkedin.com/in/saftanasdalihin" target="_blank" rel="noopener noreferrer" className="text-white hover:text-violet-500 text-3xl transition duration-300">
             <FaLinkedin />
           </a>
         </div>

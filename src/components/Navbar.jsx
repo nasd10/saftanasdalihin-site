@@ -84,13 +84,13 @@ function Navbar() {
           <NavLink onClick={() => setIsOpen(false)} to="/project.html" className={getMobileNavLinkClass}>Projects</NavLink>
           <NavLink onClick={() => setIsOpen(false)} to="/contact.html" className={getMobileNavLinkClass}>Contact</NavLink>
           <div className="flex space-x-8 mt-8">
-            <a href="https://instagram.com/your_instagram" target="_blank" rel="noopener noreferrer" className="text-white hover:text-custom-violet text-3xl transition duration-300">
+            <a href="https://instagram.com/safta_nas" target="_blank" rel="noopener noreferrer" className="text-white hover:text-custom-violet text-3xl transition duration-300">
               <FaInstagram />
             </a>
-            <a href="https://github.com/your_github" target="_blank" rel="noopener noreferrer" className="text-white hover:text-custom-violet text-3xl transition duration-300">
+            <a href="https://github.com/nasdthestudent" target="_blank" rel="noopener noreferrer" className="text-white hover:text-custom-violet text-3xl transition duration-300">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/in/your_linkedin" target="_blank" rel="noopener noreferrer" className="text-white hover:text-custom-violet text-3xl transition duration-300">
+            <a href="https://linkedin.com/in/saftanasdalihin" target="_blank" rel="noopener noreferrer" className="text-white hover:text-custom-violet text-3xl transition duration-300">
               <FaLinkedin />
             </a>
           </div>
