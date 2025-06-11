@@ -45,7 +45,7 @@ function AboutSection() {
         {/* Grid untuk Preview Konten */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {aboutPreviews.map((item, index) => (
-            <a
+            <Link
               key={index}
               href={item.link} // Gunakan href untuk navigasi ke halaman lain/anchor
               className="shadow-violet-500 group flex flex-col items-center p-8 bg-gray-900 bg-opacity-70 rounded-lg drop-shadow-lg
@@ -66,19 +66,19 @@ function AboutSection() {
               <span className="text-violet-400 group-hover:text-white transition-colors duration-300 font-medium">
                 Learn More &rarr;
               </span>
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* Tombol ke Halaman About Penuh */}
         <div className="text-center mt-40 animate-fade-in-up delay-1000">
-          <a
+          <Link
             href="/about.html"
             className="inline-block bg-violet-600 hover:bg-violet-700 text-white font-semibold py-4 px-10 rounded-full
                        transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             Explore My Full Story
-          </a>
+          </Link>
         </div>
       </div>
     </section>
