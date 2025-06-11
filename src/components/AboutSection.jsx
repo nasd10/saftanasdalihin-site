@@ -47,7 +47,7 @@ function AboutSection() {
           {aboutPreviews.map((item, index) => (
             <Link
               key={index}
-              href={item.link} // Gunakan href untuk navigasi ke halaman lain/anchor
+              to={item.link} // Gunakan href untuk navigasi ke halaman lain/anchor
               className="shadow-violet-500 group flex flex-col items-center p-8 bg-gray-900 bg-opacity-70 rounded-lg drop-shadow-lg
                          hover:bg-violet-800 hover:bg-opacity-80 transition-all duration-300 transform
                          hover:-translate-y-2 hover:scale-105 border border-transparent hover:border-violet-600
@@ -73,7 +73,7 @@ function AboutSection() {
         {/* Tombol ke Halaman About Penuh */}
         <div className="text-center mt-40 animate-fade-in-up delay-1000">
           <Link
-            href="/about.html"
+            to="/about.html"
             className="inline-block bg-violet-600 hover:bg-violet-700 text-white font-semibold py-4 px-10 rounded-full
                        transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
