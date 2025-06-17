@@ -12,12 +12,12 @@ import About from './pages/About'; // Pastikan ini ada jika Anda punya halaman A
 import Project from './pages/Project'; // Pastikan ini ada jika Anda punya halaman Project penuh
 import Contact from './pages/Contact';
 import Footer from './components/Footer'; // Import Footer
-import ScrollToTop from './components/ScrollToTop'; // Import ScrollToTop untuk scroll otomatis ke atas saat navigasi
+import ScrollHandler from './components/ScrollHandler'; 
 
 function App() {
   return (
     <Router>
-      <ScrollToTop /> {/* Tambahkan ScrollToTop di sini untuk scroll otomatis ke atas saat navigasi */}
+      <ScrollHandler /> {/* Tambahkan ScrollToTop di sini untuk scroll otomatis ke atas saat navigasi */}
       <div className="App bg-primary-color min-h-screen text-white font-montserrat">
         {/* Tambahkan CustomCursor di sini jika diperlukan */}
         <CustomCursor />

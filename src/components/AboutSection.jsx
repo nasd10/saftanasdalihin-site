@@ -8,8 +8,8 @@ function AboutSection() {
   const aboutPreviews = [
     {
       icon: <FaUserGraduate />,
-      title: "My Journey",
-      description: "From academic pursuits to professional endeavors, my path has been driven by continuous learning and growth. Discover my full story.",
+      title: "My Path to Blockchain",
+      description: "Driven by a passion for decentralized technology, my journey into blockchain development began with self-study and hands-on projects. Explore my transition and growth.",
       link: "/about.html#journey" // Link ke sub-bagian di About page
     },
     {
@@ -57,7 +57,7 @@ function AboutSection() {
               <div className="text-violet-500 text-5xl mb-6 group-hover:text-white transition-colors duration-300">
                 {item.icon}
               </div>
-              <h3 className="text-3xl font-semibold mb-4 text-white group-hover:text-white transition-colors duration-300">
+              <h3 className="text-3xl text-center font-semibold mb-4 text-white group-hover:text-white transition-colors duration-300">
                 {item.title}
               </h3>
               <p className="text-gray-300 text-center mb-6 flex-grow">

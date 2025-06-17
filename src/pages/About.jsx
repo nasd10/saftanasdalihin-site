@@ -47,20 +47,19 @@ function About() {
             About Me
           </h1>
           <p className="text-gray-300 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-            Passionate Web3 Developer from Bandung, Indonesia, dedicated to crafting
-            impactful and user-centric web experiences.
+            Hello! I'm Safta Nasdalihin, a passionate Blockchain Developer dedicated to building secure and innovative decentralized solutions. With a strong self-taught background, I've delved deep into blockchain architecture, smart contract development, and the Web3 ecosystem with high determination to create a more transparent and efficient future.
           </p>
         </section>
 
         {/* Detailed Bio / Journey Section */}
-        <section className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <section id='journey' className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="p-8 bg-gray-800 rounded-lg shadow-xl animate-fade-in-up delay-200">
-            <h3 className="text-4xl font-bold mb-6 text-white">My Journey in Tech</h3>
+            <h3 className="text-4xl font-bold mb-6 text-white">My Path to Blockchain</h3>
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              My fascination with technology began at an early age, evolving from simple curiosity into a full-blown passion for problem-solving through code. I started my journey experimenting with front-end technologies, fascinated by how design translates into interactive user interfaces.
+              My venture into the world of blockchain development stems from a profound personal conviction. I was deeply concerned by the prevalent issues of data manipulation and centralized control, feeling a growing unease with systems where power could be wielded without true transparency. The moment I discovered blockchain technology, it resonated with me as a revolutionary solution—a beacon of hope for a more secure, verifiable, and equitable digital future.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              This led me to explore the complexities of back-end development, mastering databases, APIs, and server logic. I thrive on connecting the dots between design and functionality, always striving to build robust, scalable, and intuitive applications that make a real difference.
+              This realization sparked an intense dedication within me to contribute to this transformative industry. Driven by this passion, I committed myself to rigorous self-study, diving into the intricacies of decentralized systems and mastering smart contract development. My goal is to build robust, transparent, and immutable solutions that empower individuals and foster a truly decentralized web.
             </p>
           </div>
           <div className="p-8 bg-gray-800 rounded-lg shadow-xl flex justify-center items-center animate-fade-in-up delay-400">
@@ -74,16 +73,16 @@ function About() {
         </section>
 
         {/* Skills & Expertise Section (Expanded) */}
-        <section className="mb-20 p-8 bg-gray-800 rounded-lg shadow-xl animate-fade-in-up delay-600">
+        <section id='skills' className="mb-20 p-8 bg-gray-800 rounded-lg shadow-xl animate-fade-in-up delay-600">
           <h3 className="text-4xl font-bold text-center mb-10 text-white">My Skillset</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
             {/* Contoh Skill Card */}
             {[
-              { icon: <FaReact />, name: 'React.js', color: 'text-blue-400' },
               { icon: <FaJsSquare />, name: 'JavaScript', color: 'text-yellow-400' },
+              { icon: <FaReact />, name: 'React.js', color: 'text-blue-400' },
+              { icon: <SiTailwindcss />, name: 'Tailwind CSS', color: 'text-cyan-400' },
               { icon: <FaHtml5 />, name: 'HTML5', color: 'text-orange-500' },
               { icon: <FaCss3Alt />, name: 'CSS3', color: 'text-blue-500' },
-              { icon: <SiTailwindcss />, name: 'Tailwind CSS', color: 'text-cyan-400' },
             ].map((skill, i) => (
               <div key={i} className="flex flex-col items-center p-4 bg-gray-700 rounded-lg transform hover:scale-105 transition-transform duration-200">
                 <div className={`text-5xl mb-3 ${skill.color}`}>{skill.icon}</div>
@@ -121,7 +120,7 @@ function About() {
         </section>
 
         {/* Values / Philosophy Section (New) */}
-        <section className="p-8 bg-gray-800 rounded-lg shadow-xl animate-fade-in-up delay-1200">
+        <section id='philosophy' className="p-8 bg-gray-800 rounded-lg shadow-xl animate-fade-in-up delay-1200">
           <h3 className="text-4xl font-bold text-center mb-10 text-white">My Philosophy</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="p-6 bg-gray-700 rounded-lg">
