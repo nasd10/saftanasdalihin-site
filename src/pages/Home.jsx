@@ -8,6 +8,12 @@ import Contact from './Contact';
 
 function Home() {
   return (
+    <>
+    <Helmet>
+        <title>Safta Nasdalihin | Blockchain & Smart Contract Developer Portfolio</title>
+        <meta name="description" content="Safta Nasdalihin is a passionate self-taught Blockchain Developer specializing in secure smart contracts and decentralized solutions. Explore my projects and journey in Web3." />
+        {/* Anda bisa menambahkan meta tag lain di sini jika perlu, seperti keywords (jarang digunakan lagi) */}
+      </Helmet>
     <div className='relative'>
       {/* Bagian Hero */}
       <HeroSection />
@@ -25,6 +31,7 @@ function Home() {
       {/* Tambahkan section lain jika ada di halaman Home */}
       
     </div>
+    </>
   );
 }
 
