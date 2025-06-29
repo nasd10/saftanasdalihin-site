@@ -2,9 +2,8 @@ import React from 'react';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection'; // Untuk bagian 'About' di halaman utama
 import ProjectPreviewSection from '../components/ProjectPreviewSection'; // Jika ada bagian 'Projects' di halaman utama
-// import ContactSection from '../components/ContactSection';
 import MiniContactSection from '../components/MiniContactSection.jsx';
-import Contact from './Contact';
+import { Helmet } from 'react-helmet-async'; // Pastikan Anda sudah menginstal react-helmet-async
 
 function Home() {
   return (
