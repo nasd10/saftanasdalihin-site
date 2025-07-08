@@ -8,7 +8,7 @@ const allProjects = [
     id: 1,
     title: "Simple Smart Contract",
     description: "Solidity-based contract to store and update a number (only by the owner). Built to practice access control and data persistence on Ethereum-compatible chains.",
-    image: "/public/images/simple-smart-contract.png", // PASTIKAN PATH INI BENAR
+    image: "/images/simple-smart-contract.png", // PASTIKAN PATH INI BENAR
     technologies: ["Solidity", "Remix IDE", "Etherscan", "MetaMask", "Smart Contract"], // Tambahkan teknologi
     liveLink: "https://sepolia.etherscan.io/address/0x0A5A5ecEECC9E5edD56E91675847d871F4BA2ec5",
     githubLink: "https://github.com/nasdthestudent/simple-smart-contract",
