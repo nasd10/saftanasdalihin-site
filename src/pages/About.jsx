@@ -1,7 +1,7 @@
 // src/pages/About.jsx
 import React from 'react';
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaPython, FaFigma } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiMongodb, SiFirebase } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from 'react-icons/fa';
+import { SiTailwindcss, SiSolidity } from 'react-icons/si';
 
 // Data dummy untuk pengalaman dan pendidikan
 const experiences = [
@@ -78,6 +78,7 @@ function About() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
             {/* Contoh Skill Card */}
             {[
+              { icon: <SiSolidity />, name: 'Solidity'},
               { icon: <FaJsSquare />, name: 'JavaScript', color: 'text-yellow-400' },
               { icon: <FaReact />, name: 'React.js', color: 'text-blue-400' },
               { icon: <SiTailwindcss />, name: 'Tailwind CSS', color: 'text-cyan-400' },

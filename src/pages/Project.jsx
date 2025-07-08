@@ -6,21 +6,21 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'; // Import ikon
 const allProjects = [
   {
     id: 1,
+    title: "Voting Smart Contract",
+    description: "A simple decentralized voting system built with Solidity and deployed to the Ethereum Sepolia testnet.",
+    image: "/images/Ilustrasi-Voting-Smart-Contract.png", // Pastikan path ini benar
+    technologies: ["Solidity", "Remix IDE", "Etherscan", "MetaMask", "Smart Contract"], // Tambahkan teknologi
+    liveLink: "https://sepolia.etherscan.io/address/0x0219d0B5352fC9776D88F62Ef0bB95BF12d95F7D#code",
+    githubLink: "https://github.com/nasdthestudent/voting-smart-contract",
+  },
+  {
+    id: 2,
     title: "Simple Smart Contract",
     description: "Solidity-based contract to store and update a number (only by the owner). Built to practice access control and data persistence on Ethereum-compatible chains.",
     image: "/images/simple-smart-contract.png", // PASTIKAN PATH INI BENAR
     technologies: ["Solidity", "Remix IDE", "Etherscan", "MetaMask", "Smart Contract"], // Tambahkan teknologi
     liveLink: "https://sepolia.etherscan.io/address/0x0A5A5ecEECC9E5edD56E91675847d871F4BA2ec5#code",
     githubLink: "https://github.com/nasdthestudent/simple-smart-contract",
-  },
-  {
-    id: 2,
-    title: "Portfolio V2",
-    description: "Second iteration of my personal portfolio, built with modern web technologies like React and Tailwind CSS, focusing on performance and aesthetics.",
-    image: "/images/project-2.jpg",
-    technologies: ["React", "Tailwind CSS", "Vite"],
-    liveLink: "#",
-    githubLink: "#",
   },
   {
     id: 3,
