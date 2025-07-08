@@ -6,12 +6,12 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'; // Import ikon
 const allProjects = [
   {
     id: 1,
-    title: "E-commerce Website",
-    description: "Full-stack e-commerce platform with secure payments and user authentication, designed for scalability and user experience.",
-    image: "/images/project-1.jpg", // PASTIKAN PATH INI BENAR
-    technologies: ["React", "Node.js", "MongoDB", "Stripe API", "Tailwind CSS"], // Tambahkan teknologi
-    liveLink: "#",
-    githubLink: "#",
+    title: "Simple Smart Contract",
+    description: "Solidity-based contract to store and update a number (only by the owner). Built to practice access control and data persistence on Ethereum-compatible chains.",
+    image: "/images/simple-smart-contract.png", // PASTIKAN PATH INI BENAR
+    technologies: ["Solidity", "Remix IDE", "Etherscan", "MetaMask", "Smart Contract"], // Tambahkan teknologi
+    liveLink: "https://sepolia.etherscan.io/address/0x0A5A5ecEECC9E5edD56E91675847d871F4BA2ec5",
+    githubLink: "https://github.com/nasdthestudent/simple-smart-contract",
   },
   {
     id: 2,
