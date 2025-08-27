@@ -47,19 +47,21 @@ function About() {
             About Me
           </h1>
           <p className="text-gray-300 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-            Hello! I'm Safta Nasdalihin, a passionate Blockchain Developer dedicated to building secure and innovative decentralized solutions. With a strong self-taught background, I've delved deep into blockchain architecture, smart contract development, and the Web3 ecosystem with high determination to create a more transparent and efficient future.
+            Hello! I'm Safta Nasdalihin, an aspiring Smart Contract Developer passionate about building secure, transparent, and innovative decentralized applications. With a strong self-taught background, I've been diving deep into Solidity, blockchain architecture, and the Web3 ecosystem. My mission is to design and develop reliable smart contracts that power NFTs, DAOs, DeFi, and beyond — creating a more trustworthy and efficient digital future.
           </p>
         </section>
 
         {/* Detailed Bio / Journey Section */}
         <section id='journey' className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="p-8 bg-gray-800 rounded-lg shadow-xl animate-fade-in-up delay-200">
-            <h3 className="text-4xl font-bold mb-6 text-white">My Path to Blockchain</h3>
+            <h3 className="text-4xl font-bold mb-6 text-white">My Path to Blockchain — through Smart Contracts</h3>
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              My venture into the world of blockchain development stems from a profound personal conviction. I was deeply concerned by the prevalent issues of data manipulation and centralized control, feeling a growing unease with systems where power could be wielded without true transparency. The moment I discovered blockchain technology, it resonated with me as a revolutionary solution—a beacon of hope for a more secure, verifiable, and equitable digital future.
+              My venture into the world of blockchain began with a profound personal conviction: a deep concern over data manipulation and centralized control. Traditional systems, where power could be abused without accountability, always left me uneasy. Discovering blockchain technology was a turning point—it resonated with me as a revolutionary foundation for transparency and fairness.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              This realization sparked an intense dedication within me to contribute to this transformative industry. Driven by this passion, I committed myself to rigorous self-study, diving into the intricacies of decentralized systems and mastering smart contract development. My goal is to build robust, transparent, and immutable solutions that empower individuals and foster a truly decentralized web.
+              From there, I found my passion in smart contracts—the very logic that brings blockchain to life. Smart contracts are more than code; they are trust encoded, agreements that execute themselves without intermediaries. This realization sparked my dedication to master Solidity and the principles of decentralized architecture.
+              <br /> <br />
+              My mission as a Smart Contract Developer is to design and build secure, transparent, and immutable contracts that power NFTs, DAOs, DeFi platforms, and beyond—solutions that empower individuals and shape the future of a truly decentralized web.
             </p>
           </div>
           <div className="p-8 bg-gray-800 rounded-lg shadow-xl flex justify-center items-center animate-fade-in-up delay-400">

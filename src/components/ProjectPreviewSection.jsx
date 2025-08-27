@@ -24,8 +24,8 @@ const projects = [
   },
   {
     id: 3,
-    title: "Real-time Chat App",
-    description: "A real-time messaging application with private and group chat functionalities, powered by WebSockets for instant communication.",
+    title: "Project #3",
+    description: "COMING SOON!",
     image: "/images/project-3.jpg", // PASTIKAN PATH INI BENAR
     liveLink: "#",
     githubLink: "#",
