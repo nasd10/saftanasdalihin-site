@@ -7,28 +7,27 @@ import { Link } from 'react-router-dom';
 const projects = [
   {
     id: 1,
+    title: "ClassFund – Transparent Class Treasury on Blockchain",
+    description: "ClassFund turns the traditional class treasury into a decentralized system, ensuring fairness, accountability, and transparency for all members.",
+    image: "/images/class-fund-illustration_edited.png", 
+    liveLink: "https://sepolia.etherscan.io/address/0x43c9c8ced4655a2b7ee26d680935cb0d82bdf071#code",
+    githubLink: "https://github.com/nasdthestudent/class-fund",
+  },
+  {
+    id: 2,
     title: "Voting Smart Contract",
     description: "A simple decentralized voting system built with Solidity and deployed to the Ethereum Sepolia testnet.",
-    image: "/images/Ilustrasi-Voting-Smart-Contract.png", // Pastikan path ini benar
-    technologies: ["Solidity", "Remix IDE", "Etherscan", "MetaMask", "Smart Contract"], // Tambahkan teknologi
+    image: "/images/Ilustrasi-Voting-Smart-Contract.png", 
     liveLink: "https://sepolia.etherscan.io/address/0x0219d0B5352fC9776D88F62Ef0bB95BF12d95F7D#code",
     githubLink: "https://github.com/nasdthestudent/voting-smart-contract",
   },
   {
-    id: 2,
+    id: 3,
     title: "Simple Smart Contract",
     description: "Solidity-based contract to store and update a number (only by the owner). Built to practice access control and data persistence on Ethereum-compatible chains.",
-    image: "/images/simple-smart-contract.png", // PASTIKAN PATH INI BENAR
+    image: "/images/simple-smart-contract.png", 
     liveLink: "https://sepolia.etherscan.io/address/0x0A5A5ecEECC9E5edD56E91675847d871F4BA2ec5",
     githubLink: "https://github.com/nasdthestudent/simple-smart-contract",
-  },
-  {
-    id: 3,
-    title: "Project #3",
-    description: "COMING SOON!",
-    image: "/images/project-3.jpg", // PASTIKAN PATH INI BENAR
-    liveLink: "#",
-    githubLink: "#",
   },
 ];
 
