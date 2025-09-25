@@ -13,9 +13,9 @@ function HeroSection() {
 
   return (
     <section id="home" className="z-5 relative h-screen flex flex-col items-center justify-center text-center text-white overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center"
+      <div className="absolute inset-0 bg-cover bg-[75%]"
            style={{
-             backgroundImage: 'url(https://pbs.twimg.com/media/FgkUNTzXoAMWq60.png)',
+             backgroundImage: 'url("images/Nasel.jpg")',
              backgroundAttachment: 'fixed',
            }}
       >
@@ -29,7 +29,7 @@ function HeroSection() {
       <div className="relative z-20 flex flex-col items-center justify-center h-full p-4">
         <h1 className="text-3xl md:text-6xl font-bold mb-6 animate-fade-in-up">
           Hi, I'm <i className='font-serif'>Safta Nasdalihin</i><br />
-          <span className="text-violet-500">Smart Contract Developer</span>
+          <span className="text-violet-500">Blockchain Developer</span>
         </h1>
         <p className="text-xl md:text-2xl italic mb-10 animate-fade-in-up delay-200">"Take it seriously, aim higher"</p>
         <div className="flex justify-center space-x-8 animate-fade-in-up delay-400">
