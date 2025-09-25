@@ -19,7 +19,7 @@ function HeroSection() {
              backgroundAttachment: 'fixed',
            }}
       >
-        <div className="absolute inset-0 bg-black opacity-70"></div>
+        <div className="absolute inset-0 bg-black opacity-60"></div>
       </div>
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 border-4 border-violet-500 rounded-full animate-pulse-slow z-10"></div>
