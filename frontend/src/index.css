@@ -1,0 +1,285 @@
+/* src/index.css */
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+/* Import FontAwesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+/* In Tailwind CSS v4, you typically do NOT use @tailwind directives here.
+   Instead, Tailwind's styles are injected via PostCSS configuration. */
+
+/* Reset default margins and paddings - Tailwind's Preflight handles most of this */
+*{
+    cursor: none;
+}
+html, body {
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+    background-color: #0d1117; /* Warna latar belakang umum */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/* Base font for the body, assuming Montserrat is the main sans-serif font */
+
+.logo{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 2.5rem; /* Ukuran font untuk logo */
+    font-style: italic; /* Italic untuk logo */
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 12px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    border: 2px solid #f4f4f4;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+::-webkit-scrollbar-horizontal {
+    height: 8px;
+}
+::-webkit-scrollbar-track-horizontal {
+    background: #e0e0e0;
+}
+::-webkit-scrollbar-thumb-horizontal {
+    background: #888;
+}
+.scroll-active::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+/* src/index.css */
+/* ... (kode yang sudah ada) ... */
+
+/* Kelas untuk Active/Hover Underline */
+.nav-link-underline {
+    position: relative; /* Penting untuk penempatan ::after */
+    display: inline-block; /* Agar lebarnya sesuai konten */
+}
+
+.nav-link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Posisi di bawah teks, sesuaikan jika perlu */
+    left: 50%; /* Mulai dari tengah */
+    transform: translateX(-50%); /* Pusatkan */
+    width: 0; /* Awalnya tidak terlihat */
+    height: 2px; /* Ketebalan garis */
+    background-color: #8B00FF; /* Warna garis (custom-violet) */
+    transition: width 0.3s ease-in-out; /* Animasi lebar */
+    border-radius: 9999px; /* Opsional: membuat ujung garis membulat */
+}
+
+.nav-link-underline:hover::after {
+    width: 100%; /* Lebar penuh saat hover */
+}
+
+/* Kelas untuk link aktif */
+.nav-link-underline.active-link::after {
+    width: 100%; /* Lebar penuh saat aktif */
+}
+
+/* Modifikasi untuk mobile (jika diperlukan, untuk ukuran font yang berbeda) */
+.mobile-nav-link-underline {
+    position: relative;
+    display: block; /* Atau inline-block, sesuaikan */
+    text-align: center; /* Untuk mobile menu */
+}
+
+.mobile-nav-link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* Sesuaikan posisi bawah untuk mobile */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px; /* Ketebalan garis untuk mobile */
+    background-color: #8B00FF; /* Warna garis (custom-violet) */
+    transition: width 0.3s ease-in-out;
+    border-radius: 9999px;
+}
+
+.mobile-nav-link-underline:hover::after {
+    width: 100%;
+}
+
+.mobile-nav-link-underline.active-link::after {
+    width: 100%;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px; /* Ukuran awal kursor, sesuaikan */
+  height: 40px; /* Ukuran awal kursor, sesuaikan */
+  border-radius: 50%;
+  /* Efek cahaya/ekor utama: background semi-transparan dan blur yang kuat */
+  background-color: rgba(139, 0, 255, 0.85); /* custom-violet dengan opasitas 25% - lebih transparan */
+  filter: blur(20px); /* PERBESAR BLUR untuk efek cahaya yang lebih menyebar */
+  transform: translate(-50%, -50%); /* Pusatkan kursor di tengah titik mouse */
+  pointer-events: none; /* Sangat penting: kursor tidak menghalangi interaksi */
+  z-index: 9999; /* Pastikan di atas semua elemen */
+  /* Transisi untuk pergerakan halus, ini yang menciptakan 'ekor' visual */
+  transition: transform 0.08s ease-out, /* Lebih cepat agar terasa responsif */
+              width 0.2s ease-out,
+              height 0.2s ease-out,
+              background-color 0.2s ease-out,
+              filter 0.2s ease-out; /* Tambahkan filter ke transisi */
+}
+
+/* Opsional: Efek saat hover pada link/button */
+.custom-cursor.hovered {
+  width: 60px; /* Membesar saat hover */
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.4); /* Warna putih dengan opasitas lebih rendah */
+  filter: blur(25px); /* Blur sedikit lebih banyak saat hovered */
+}
+
+/* Opsional: Efek saat click */
+.custom-cursor.clicked {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(139, 0, 255, 0.6); /* Warna ungu lebih solid */
+  filter: blur(10px); /* Blur lebih sedikit saat clicked, agar lebih 'padat' */
+}
+
+/* Untuk mobile, sembunyikan kursor kustom karena tidak relevan dengan sentuhan */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+
+}
+.project-card-tailwind-glow {
+  background-color: rgba(31, 41, 55, 0.4); /* Menggunakan gray-800 dengan opasitas 0.4 */
+  border: 1px solid rgba(124, 58, 237, 0.3); /* Border dari violet-600 */
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.2); /* Shadow dari violet-600 */
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card-tailwind-glow:hover {
+  background-color: rgba(31, 41, 55, 0.6); /* Lebih gelap saat hover */
+  border-color: rgba(124, 58, 237, 0.6); /* Border lebih terang */
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4); /* Shadow lebih kuat */
+}
+
+/* Untuk mobile, sembunyikan kursor kustom */
+@media (max-width: 768px) {
+  .custom-cursor, .cursor-trail-dot {
+    display: none;
+  }
+}
+/* src/index.css atau src/App.css */
+
+/* Animasi untuk cincin */
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse-medium {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.07);
+    opacity: 0.7;
+  }
+}
+
+@keyframes pulse-fast {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+/* Animasi fade-in-up untuk teks */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* src/App.css atau src/index.css */
+
+/* ... (animasi fade-in-up dan pulse dari sebelumnya) ... */
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.3, 0.9); /* Durasi dan easing bisa diatur */
+}
+
+/* Untuk delay animasi per blob */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 6s infinite ease-in-out;
+}
+
+.animate-pulse-medium {
+  animation: pulse-medium 4s infinite ease-in-out;
+}
+
+.animate-pulse-fast {
+  animation: pulse-fast 2s infinite ease-in-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-fade-in-up.delay-400 {
+  animation-delay: 0.4s;
+}
