@@ -81,11 +81,11 @@ function About() {
             {/* Contoh Skill Card */}
             {[
               { icon: <SiSolidity />, name: 'Solidity'},
-              { icon: <FaJsSquare />, name: 'JavaScript', color: 'text-yellow-400' },
-              { icon: <FaReact />, name: 'React.js', color: 'text-blue-400' },
               { icon: <SiTailwindcss />, name: 'Tailwind CSS', color: 'text-cyan-400' },
-              { icon: <FaHtml5 />, name: 'HTML5', color: 'text-orange-500' },
+              { icon: <FaReact />, name: 'React.js', color: 'text-blue-400' },
+              { icon: <FaJsSquare />, name: 'JavaScript', color: 'text-yellow-400' },
               { icon: <FaCss3Alt />, name: 'CSS3', color: 'text-blue-500' },
+              { icon: <FaHtml5 />, name: 'HTML5', color: 'text-orange-500' },
             ].map((skill, i) => (
               <div key={i} className="flex flex-col items-center p-4 bg-gray-700 rounded-lg transform hover:scale-105 transition-transform duration-200">
                 <div className={`text-5xl mb-3 ${skill.color}`}>{skill.icon}</div>
