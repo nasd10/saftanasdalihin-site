@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -16,20 +16,40 @@ function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Di sini Anda akan mengintegrasikan layanan backend untuk mengirim email.
-    // Kode ini dihilangkan karena Netlify akan mengurusnya.
-    // Netlify akan memproses form secara otomatis.
-    // Log atau alert tidak diperlukan lagi untuk proses pengiriman.
+  const handleSubmit = async (e) => {
+    e.preventDefault();  // Mencegah reload halaman saat form disubmit
+    console.log('Tombol submit diklik!');
+    console.log('Form Data:', formData);
+
+    try {
+      const response = await fetch('http://localhost:3000/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      console.log('Response dari backend:', data);  // Log respons dari backend
+
+      if (response.ok) {
+        alert(data.message);  // Pesan sukses
+      } else {
+        alert(data.error);  // Pesan error
+      }
+
+      // Reset form setelah pengiriman data
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Gagal mengirim pesan');
+    }
   };
 
   return (
     <section id="contact" className="relative py-20 px-4 md:px-12 text-white overflow-hidden bg-gray-900">
-      {/* BACKGROUND GRADIENT - Menggunakan warna Tailwind bawaan (konsisten dengan ProjectPreviewSection) */}
       <div className="absolute h-full inset-0 rounded-3xl bg-gradient-to-br from-gray-900 via-gray-950 to-violet-900 z-0"></div>
-
-      {/* BLOB ANIMASI (jika nanti berfungsi) */}
       <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-15 animate-blob z-0 animation-delay-4000"></div>
       <div className="absolute bottom-1/4 right-1/4 w-52 h-52 bg-violet-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-6000"></div>
 
@@ -83,7 +103,7 @@ function Contact() {
           {/* Contact Form Section */}
           <div className="w-full md:w-1/2 bg-gray-800 p-8 rounded-lg shadow-xl animate-fade-in-up delay-400">
             <h3 className="text-3xl font-semibold mb-6 text-white">Send Me a Message</h3>
-            <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-gray-300 text-lg font-medium mb-2">Name</label>
                 <input
@@ -125,11 +145,12 @@ function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3 rounded-md
-                           transition duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-gray-800"
+                className="w-full bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3 rounded-full
+                          transition duration-300 transform hover:scale-105 active:scale-110 shadow-md hover:shadow-lg"
               >
                 Send Message
               </button>
+
             </form>
           </div>
         </div>
