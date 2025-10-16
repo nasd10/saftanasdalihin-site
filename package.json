@@ -1,14 +1,12 @@
 {
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "mysql2": "^3.15.2"
+    "express": "^5.1.0"
   },
   "name": "saftanasdalihin-site",
   "version": "1.0.0",
   "description": "This repository contains the source for the personal portfolio website of Safta Nasdalihin. The site is a modern, responsive single-page React application built with Vite and Tailwind CSS and is intended to showcase projects, skills, and contact information.",
   "main": "server.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
