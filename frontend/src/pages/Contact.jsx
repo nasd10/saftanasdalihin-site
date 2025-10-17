@@ -22,7 +22,7 @@ function Contact() {
     console.log('Form Data:', formData);
 
     try {
-      const response = await fetch('/.netlify/functions/contact', {
+      const response = await fetch('https://saftanasdahlin-site.netlify.app/.netlify/functions/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,13 +31,11 @@ function Contact() {
       });
 
       const data = await response.json();
-      console.log('Response dari backend:', data);  // Log respons dari backend
-
-      if (response.ok) {
-        alert(data.message);  // Pesan sukses
-      } else {
-        alert(data.error);  // Pesan error
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong');
       }
+      console.log('Response dari backend:', data);
+      alert(data.message);  // Pesan sukses
 
       // Reset form setelah pengiriman data
       setFormData({ name: '', email: '', message: '' });
