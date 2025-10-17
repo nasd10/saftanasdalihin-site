@@ -1,5 +1,5 @@
 [build]
-  functions = "backend/netlify-functions"  # Folder tempat serverless functions berada
+  functions = "backend/netlify-functions/"  # Folder tempat serverless functions berada
   publish = "frontend/build"  # Folder build frontend (jika menggunakan React, Vue, dll.)
 
 [dev]
