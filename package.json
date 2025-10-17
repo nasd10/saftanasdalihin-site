@@ -1,24 +1,23 @@
 {
+  "name": "saftanasdalihin-site",
+  "version": "1.0.0",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0"
   },
-  "name": "saftanasdalihin-site",
-  "version": "1.0.0",
-  "description": "This repository contains the source for the personal portfolio website of Safta Nasdalihin. The site is a modern, responsive single-page React application built with Vite and Tailwind CSS and is intended to showcase projects, skills, and contact information.",
-  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
+  },
+  "engines": {
+    "node": "16.x",  
+    "npm": "8.x"     
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nasd10/saftanasdalihin-site.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/nasd10/saftanasdalihin-site/issues"
   },
