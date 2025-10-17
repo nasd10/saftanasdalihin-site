@@ -22,7 +22,7 @@ function Contact() {
     console.log('Form Data:', formData);
 
     try {
-      const response = await fetch('http://localhost:3000/contact', {
+      const response = await fetch('/.netlify/functions/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
