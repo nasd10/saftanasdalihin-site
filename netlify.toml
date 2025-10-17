@@ -1,4 +1,5 @@
 [build]
+  base = "/"  # Base directory untuk proyek
   functions = "backend/netlify-functions"  # Folder tempat serverless functions berada
   publish = "frontend/dist"  # Folder build frontend (jika menggunakan React, Vue, dll.)
 
