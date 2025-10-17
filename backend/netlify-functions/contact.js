@@ -29,6 +29,19 @@ exports.handler = async (event, context) => {
   // Memastikan koneksi ke database
   await connectToDatabase();
 
+  // Menangani preflight request OPTIONS (untuk CORS)
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*', // Bisa ganti '*' dengan domain tertentu untuk keamanan
+        'Access-Control-Allow-Methods': 'OPTIONS,POST',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
+      body: '',
+    };
+  }
+
   if (event.httpMethod === 'POST') {
     // Mendapatkan data dari body request
     const { name, email, message } = JSON.parse(event.body);
@@ -37,6 +50,9 @@ exports.handler = async (event, context) => {
     if (!name || !email || !message) {
       return {
         statusCode: 400,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
         body: JSON.stringify({ error: 'Semua kolom wajib diisi.' }),
       };
     }
@@ -49,12 +65,18 @@ exports.handler = async (event, context) => {
       await newContact.save();
       return {
         statusCode: 200,
+        headers: {
+          'Access-Control-Allow-Origin': '*', // Mengizinkan akses dari semua origin
+        },
         body: JSON.stringify({ message: 'Pesan berhasil dikirim!' }),
       };
     } catch (err) {
       console.error('Gagal menyimpan data:', err);
       return {
         statusCode: 500,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
         body: JSON.stringify({ error: 'Gagal mengirim pesan.' }),
       };
     }
@@ -62,6 +84,9 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 405,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
     body: JSON.stringify({ error: 'Metode HTTP tidak diizinkan.' }),
   };
 };
