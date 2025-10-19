@@ -22,7 +22,8 @@ function Contact() {
     console.log('Form Data:', formData);
 
     try {
-      const response = await fetch('https://saftanasdahlin-site.netlify.app/.netlify/functions/contact', {
+      // Use same-origin functions path so CORS is handled by the function headers
+      const response = await fetch('/.netlify/functions/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

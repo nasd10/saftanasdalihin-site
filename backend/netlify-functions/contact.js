@@ -26,33 +26,45 @@ const contactSchema = new mongoose.Schema({
 const Contact = mongoose.models.Contact || mongoose.model('Contact', contactSchema);
 
 exports.handler = async (event, context) => {
-  // Memastikan koneksi ke database
-  await connectToDatabase();
+  // CORS headers to include in every response
+  const CORS_HEADERS = {
+    'Access-Control-Allow-Origin': '*', // consider restricting to your domain for production
+    'Access-Control-Allow-Methods': 'OPTIONS,POST',
+    'Access-Control-Allow-Headers': 'Content-Type',
+  };
 
-  // Menangani preflight request OPTIONS (untuk CORS)
+  // Menangani preflight request OPTIONS (untuk CORS) -- respond early without DB connection
   if (event.httpMethod === 'OPTIONS') {
     return {
       statusCode: 200,
-      headers: {
-        'Access-Control-Allow-Origin': '*', // Bisa ganti '*' dengan domain tertentu untuk keamanan
-        'Access-Control-Allow-Methods': 'OPTIONS,POST',
-        'Access-Control-Allow-Headers': 'Content-Type',
-      },
+      headers: CORS_HEADERS,
       body: '',
     };
   }
 
+  // Pastikan koneksi ke database (hanya untuk non-OPTIONS requests)
+  await connectToDatabase();
+
   if (event.httpMethod === 'POST') {
     // Mendapatkan data dari body request
-    const { name, email, message } = JSON.parse(event.body);
+    let parsed;
+    try {
+      parsed = JSON.parse(event.body);
+    } catch (err) {
+      return {
+        statusCode: 400,
+        headers: CORS_HEADERS,
+        body: JSON.stringify({ error: 'Invalid JSON body.' }),
+      };
+    }
+
+    const { name, email, message } = parsed;
 
     // Validasi data
     if (!name || !email || !message) {
       return {
         statusCode: 400,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        },
+        headers: CORS_HEADERS,
         body: JSON.stringify({ error: 'Semua kolom wajib diisi.' }),
       };
     }
@@ -65,28 +77,21 @@ exports.handler = async (event, context) => {
       await newContact.save();
       return {
         statusCode: 200,
-        headers: {
-          'Access-Control-Allow-Origin': '*', // Mengizinkan akses dari semua origin
-        },
+        headers: CORS_HEADERS,
         body: JSON.stringify({ message: 'Pesan berhasil dikirim!' }),
       };
     } catch (err) {
       console.error('Gagal menyimpan data:', err);
       return {
         statusCode: 500,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        },
+        headers: CORS_HEADERS,
         body: JSON.stringify({ error: 'Gagal mengirim pesan.' }),
       };
     }
   }
-
   return {
     statusCode: 405,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-    },
+    headers: CORS_HEADERS,
     body: JSON.stringify({ error: 'Metode HTTP tidak diizinkan.' }),
   };
 };
