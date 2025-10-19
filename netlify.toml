@@ -1,5 +1,5 @@
 [build]
-  base = "frontend"  # Base directory untuk proyek
+  base = "/"  # Base directory untuk proyek
   command = "npm run build"
   publish = "frontend/dist"  # Folder build frontend (jika menggunakan React, Vue, dll.)
 
