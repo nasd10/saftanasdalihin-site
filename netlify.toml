@@ -1,8 +1,10 @@
 [build]
-  base = "/"  # Base directory untuk proyek
-  command = "cd frontend && npm run build"
-  publish = "frontend/dist"  # Folder build frontend (jika menggunakan React, Vue, dll.)
+  base = "/"  
+  command = "cd frontend && npm ci && npm run build"
+  publish = "frontend/dist"  # 
 
 [functions]
   directory = "backend/netlify-functions"
 
+[build.environment]
+  NODE_VERSION = "16"  
