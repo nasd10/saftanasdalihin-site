@@ -92,10 +92,13 @@ exports.handler = async (event, context) => {
       };
     } catch (err) {
       console.error('Gagal menyimpan data:', err);
+      // If DEBUG_ERRORS is enabled, return the sanitized error message to help debugging.
+      const debug = process.env.DEBUG_ERRORS === 'true';
+      const safeMessage = debug ? (err.message || 'Internal error') : 'Gagal mengirim pesan.';
       return {
         statusCode: 500,
         headers: CORS_HEADERS,
-        body: JSON.stringify({ error: 'Gagal mengirim pesan.' }),
+        body: JSON.stringify({ error: safeMessage }),
       };
     }
   }
