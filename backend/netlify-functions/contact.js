@@ -4,13 +4,23 @@ const mongoose = require('mongoose');
 // Menghubungkan ke MongoDB
 const connectToDatabase = async () => {
   if (mongoose.connection.readyState === 1) {
-    return; // Jika sudah terhubung, langsung lanjut
+    return; // already connected
   }
 
-  await mongoose.connect(process.env.MONGO_URI, {
+  const uri = process.env.MONGO_URI;
+  if (!uri) {
+    throw new Error('MONGO_URI not configured');
+  }
+
+  // Fail fast if server selection can't be made
+  const connectOptions = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-  });
+    // serverSelectionTimeoutMS makes the driver give up quickly if DNS/unreachable
+    serverSelectionTimeoutMS: 5000,
+  };
+
+  await mongoose.connect(uri, connectOptions);
   console.log('Terhubung ke MongoDB');
 };
 

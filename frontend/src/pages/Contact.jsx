@@ -31,12 +31,24 @@ function Contact() {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data.error || 'Something went wrong');
+      let data;
+      try {
+        // Some error responses may be empty or not JSON; handle gracefully
+        data = await response.json();
+      } catch (err) {
+        console.warn('Response not JSON or empty', err);
+        if (!response.ok) {
+          throw new Error(`Server returned ${response.status}`);
+        }
+        data = { message: 'Success (no JSON body)' };
       }
+
+      if (!response.ok) {
+        throw new Error(data.error || `Server returned ${response.status}`);
+      }
+
       console.log('Response dari backend:', data);
-      alert(data.message);  // Pesan sukses
+      alert(data.message || 'Pesan berhasil dikirim!');  // Pesan sukses
 
       // Reset form setelah pengiriman data
       setFormData({ name: '', email: '', message: '' });
