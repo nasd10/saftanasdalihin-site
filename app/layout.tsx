@@ -14,6 +14,21 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Safta Nas | Smart Contract Developer",
   description: "Safta Nasdalihin's professional portfolio, a Smart Contract Developer specializing in secure and audited Solidity development across various blockchain platforms.",
+  
+  // === IMPLEMENTATION DYNAMIC FAVICON (NEW) ===
+  icons: [
+    {
+      rel: 'icon',
+      url: '/favicon-dark.png',
+      media: '(prefers-color-scheme: light)',
+    },
+    {
+      rel: 'icon',
+      url: '/favicon-light.png',
+      media: '(prefers-color-scheme: dark)',
+    },
+  ],
+  // ============================================
 };
 
 export default function RootLayout({
