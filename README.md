@@ -1,101 +1,166 @@
-# Safta Nasdalihin — Personal Portfolio Website
+# Safta Nasdalihin | Smart Contract Developer
 
-This repository contains the source for the personal portfolio website of Safta Nasdalihin. The site is a modern, responsive single-page React application built with Vite and Tailwind CSS and is intended to showcase projects, skills, and contact information.
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)](https://soliditylang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
 ---
 
-## Key technologies
+Welcome to my personal portfolio website! This site showcases my expertise in architecting and auditing **secure Smart Contracts**, designing robust **blockchain protocols**, and building high-performance **Decentralized Applications (DApps)**.
 
-- React (JSX)
-- Vite (development and build tooling)
-- Tailwind CSS (utility-first styling, Tailwind v4)
-- PostCSS
-- React Router (client-side routes)
-- React Icons
+Built with modern web standards, this portfolio demonstrates my commitment to performance, security, and exceptional user experience.
 
-## Live site
+## ✨ Highlights
 
-The site is deployed (previously) on Netlify. The repository includes a `_redirects` file and a `sitemap.xml` in `frontend/public` to help with hosting and SEO.
+- **Smart Contract Expertise:** Specialization in secure, efficient, and transparent blockchain applications across multiple networks.
+- **Protocol Auditing:** Focus on designing trustless systems and auditing code for vulnerabilities and optimization.
+- **High Performance:** Optimized for speed with Server-Side Rendering (SSR), image optimization, and Lighthouse/Core Web Vitals.
+- **Smooth Animations:** Leverages `Framer Motion` for elegant, purposeful animations that enhance user engagement.
+- **Dark Mode Support:** Full Light/Dark mode implementation using `next-themes` for semantic contrast.
+- **Secure Contact Form:** Powered by `Resend API` with frontend validation using `react-hook-form` and `Zod`.
+- **SEO Ready:** Proper metadata and structured data using Next.js App Router Server Components.
 
-## Main features
+## 🚀 Tech Stack
 
-- Home, About, Projects and Contact pages
-- Project preview cards with image, description and links to live/contract or GitHub
-- Custom animated cursor and subtle background animations
-- Responsive layout with a mobile-friendly navigation drawer
-- Contact form wired for Netlify forms (progressive fallback available)
+| Category | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Framework** | Next.js 16 (App Router + Turbopack) | Full-stack rendering, routing, and optimization. |
+| **Language** | TypeScript | Type-safe, scalable, and maintainable codebase. |
+| **Styling** | Tailwind CSS v4 | Utility-first CSS for rapid, responsive design. |
+| **Animation** | Framer Motion | Physics-based, declarative UI animations. |
+| **Form Management** | React Hook Form + Zod | Efficient form state management and schema validation. |
+| **Email Service** | Resend API | Reliable transaction email delivery for contact forms. |
+| **Icons** | React Icons | Consistent, accessible icon library. |
+| **Deployment** | Vercel | Seamless CI/CD and performance optimization. |
 
-## Repository layout (important files)
+## 📋 Features
 
-- `frontend/`
-  - `index.html` — app entry HTML
-  - `package.json` — scripts & dependencies
-  - `vite.config.js` — Vite configuration
-  - `postcss.config.js` & `tailwind.config.js` — Tailwind/PostCSS setup
-  - `src/` — React source files
-    - `main.jsx` — React entry
-    - `App.jsx` — application routes and layout
-    - `index.css`, `App.css` — global styles and utilities
-    - `components/` — reusable React components (Navbar, Hero, Footer, CustomCursor, etc.)
-    - `pages/` — route pages (Home, About, Project, Contact)
-  - `public/` — static assets and `sitemap.xml`
+- **Hero Section:** Compelling introduction with animated call-to-action.
+- **About Section:** Professional bio, skills grid, and experience highlights.
+- **Projects Showcase:** Filterable project grid with live previews and GitHub links.
+- **Project Detail Pages:** In-depth case studies with architecture, challenges, solutions, and screenshots.
+- **Contact Form:** Fully validated contact form with error handling and success feedback.
+- **Responsive Design:** Mobile-first approach ensuring excellent UX across all devices.
+- **Accessibility:** WCAG compliant markup and semantic HTML.
 
-## Local development
+## ⚙️ Local Setup
 
-Open a terminal (PowerShell on Windows). From the repository root run:
+### Prerequisites
 
-```powershell
-cd frontend
+- **Node.js** v18+ and **npm** (or pnpm/yarn)
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/saftanasdalihin/my-portfolio.git
+cd my-portfolio
+
+# 2. Install dependencies
 npm install
+# or
+pnpm install
+
+# 3. Create environment file
+touch .env.local
+```
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+# .env.local
+RESEND_API_KEY="re_YOUR_SECRET_RESEND_API_KEY"
+```
+
+Get your Resend API Key at [resend.com](https://resend.com).
+
+### Running Locally
+
+```bash
 npm run dev
+# or
+pnpm dev
 ```
 
-This starts Vite's development server and opens a local address (usually `http://localhost:5173`).
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the portfolio.
 
-## Build for production
+## 📦 Project Structure
 
-To build the production bundle and preview it locally:
+```
+my-portfolio/
+├── app/                      # Next.js App Router
+│   ├── (pages)/             # Route groups
+│   ├── api/                 # API routes (contact form)
+│   ├── globals.css          # Global styles with Tailwind
+│   └── layout.tsx           # Root layout
+├── components/              # Reusable React components
+│   └── sections/            # Page sections (Hero, About, Projects, etc.)
+├── lib/                     # Utilities and helpers
+│   ├── data.ts             # Project data and helpers
+│   └── types.ts            # TypeScript type definitions
+├── public/                  # Static assets
+│   └── images/             # Project thumbnails and gallery
+├── tailwind.config.ts       # Tailwind configuration
+├── postcss.config.mjs       # PostCSS configuration
+└── README.md               # This file
+```
 
-```powershell
-cd frontend
+## 🎨 Customization
+
+### Colors & Theme
+
+Edit `app/globals.css` to customize CSS variables:
+
+```css
+:root {
+  --primary: 0 0% 9%;
+  --secondary: 0 0% 96.1%;
+  /* ...other variables... */
+}
+```
+
+### Projects Data
+
+Edit `lib/data.ts` to add your projects and update project details in `lib/types.ts`.
+
+### Content
+
+Update text content directly in component files under `components/sections/`.
+
+## 🚀 Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. Push your repository to GitHub.
+2. Visit [vercel.com](https://vercel.com) and import your repository.
+3. Add environment variables in Vercel dashboard.
+4. Deploy with one click!
+
+### Deploy to Other Platforms
+
+The portfolio can be deployed to any Node.js-compatible platform (Netlify, AWS Amplify, etc.).
+
+Build command:
+```bash
 npm run build
-npm run preview
 ```
 
-## Linting
+## 📞 Contact
 
-There is an `eslint` configuration included. Run:
+For inquiries or collaborations:
+- **Email:** saftanasdalihin@gmail.com
+- **Twitter:** [@yourhandle](https://twitter.com/)
+- **GitHub:** [@saftanasdalihin](https://github.com/saftanasdalihin)
+- **LinkedIn:** [Your Profile](https://linkedin.com/)
 
-```powershell
-cd frontend
-npm run lint
-```
+## 📄 License
 
-## Notes and troubleshooting
-
-- This project uses Tailwind v4 with a PostCSS plugin. If styles are not applied, ensure `node_modules` is installed and that PostCSS is running (Vite handles this during `dev`/`build`).
-- If the custom cursor or some animations behave oddly on mobile, the cursor is intentionally hidden on small screens in the CSS (`@media (max-width: 768px)`).
-- If you change routing paths, keep the Netlify `_redirects` rules in mind for production hosting.
-
-## Development assumptions
-
-- Node.js (LTS) is recommended (Node 16+ tested). Use your preferred Node version manager if necessary.
-- NPM is used in this project (scripts in `frontend/package.json`).
-
-## Contact
-
-If you need to reach the site owner:
-
-- Email: saftanasdalihin@gmail.com
-- GitHub: https://github.com/nasdthestudent
-- LinkedIn: https://www.linkedin.com/in/saftanasdalihin/
+This project is open source under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-If you want, I can:
-
-- add a short `CONTRIBUTING.md` or `CODE_OF_CONDUCT`
-- wire a CI script (GitHub Actions) that runs lint/build on push
-- run the dev server and validate the app locally
-
-Let me know which next step you'd like.
+**Built by Safta Nasdalihin | West Java, Indonesia**

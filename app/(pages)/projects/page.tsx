@@ -1,0 +1,64 @@
+// app/projects/page.tsx
+"use client";
+
+import { ProjectCard } from '@/components/sections/ProjectCard';
+import { PROJECTS_DATA } from '@/lib/data';
+import { motion } from 'framer-motion';
+
+const containerVariants:any = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants:any = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.42, 0, 0.58, 1],
+    },
+  },
+};
+
+export default function ProjectsPage() {
+  return (
+    <section className="py-8">
+      <motion.h1 
+        className="mb-10 text-center text-5xl font-extrabold text-primary"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Projects
+      </motion.h1>      
+      <motion.p 
+        className="mb-12 text-center text-lg text-foreground/70 max-w-3xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.15, ease: [0.42, 0, 0.58, 1] }} 
+      >
+        Explore my work focused on decentralized infrastructure. 
+        Every project demonstrates secure code, robust protocol design, and an outstanding user experience for the DApp frontend.
+      </motion.p>
+      <motion.div 
+        className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {PROJECTS_DATA.map((project) => (
+          <motion.div key={project.slug} variants={itemVariants}>
+            <ProjectCard project={project} /> 
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
+  );
+}
