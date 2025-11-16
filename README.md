@@ -153,9 +153,9 @@ npm run build
 
 For inquiries or collaborations:
 - **Email:** saftanasdalihin@gmail.com
-- **Twitter:** [@yourhandle](https://twitter.com/)
-- **GitHub:** [@saftanasdalihin](https://github.com/saftanasdalihin)
-- **LinkedIn:** [Your Profile](https://linkedin.com/)
+- **GitHub:** [@nasd10](https://github.com/nasd10)
+<!-- - **LinkedIn:** [Safta Nasdalihin](https://linkedin.com/) -->
+- **Instagram:** [@safta_nas] (https://instagram.com/safta_nas)
 
 ## 📄 License
 
