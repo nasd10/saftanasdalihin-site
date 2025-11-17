@@ -37,6 +37,43 @@ const config: Config = {
           foreground: "hsl(var(--secondary-foreground))",
         },
       },
+      animation: {
+        fadeIn: "fadeIn 0.3s ease-in-out",
+        fadeOut: "fadeOut 0.3s ease-in-out",
+        slideDown: "slideDown 0.3s ease-out",
+        slideUp: "slideUp 0.3s ease-in",
+        spin: "spin 1s linear infinite",
+      },
+      keyframes: {
+        fadeIn: {
+          "from": { opacity: "0" },
+          "to": { opacity: "1" },
+        },
+        fadeOut: {
+          "from": { opacity: "1" },
+          "to": { opacity: "0" },
+        },
+        slideDown: {
+          "from": { 
+            opacity: "0",
+            transform: "translateY(-10px)",
+          },
+          "to": { 
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        slideUp: {
+          "from": { 
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+          "to": { 
+            opacity: "0",
+            transform: "translateY(-10px)",
+          },
+        },
+      },
     },
   },
   plugins: [],
