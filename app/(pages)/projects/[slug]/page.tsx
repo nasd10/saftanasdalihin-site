@@ -7,12 +7,19 @@ import { DetailedProject } from '@/lib/types';
 
 // 1. Static Generation
 export async function generateStaticParams() {
-  return getAllProjectSlugs();
+  const slugs = getAllProjectSlugs();
+  // Log available slugs during dev for debugging static param generation
+  if (process.env.NODE_ENV !== 'production') {
+    // eslint-disable-next-line no-console
+    console.log('generateStaticParams -> slugs:', slugs);
+  }
+  return slugs;
 }
 
 // 2. Dynamic Metadata
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const project = getProjectBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
   if (!project) return { title: 'Project Not Found' };
   
   return {
@@ -22,17 +29,22 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 // 3. Main Page Component
-export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
-  const project = getProjectBySlug(params.slug);
+export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+
+  // Debug logging to help diagnose 404s in dev
+  if (process.env.NODE_ENV !== 'production') {
+    // eslint-disable-next-line no-console
+    console.log('ProjectDetailPage -> requested slug:', slug, 'found:', Boolean(project));
+  }
 
   if (!project) {
-    notFound(); 
+    notFound();
   }
-  
-  const detailedProject = project as DetailedProject; 
 
-// Send the fetched data to the Client Component for rendering
-  return (
-    <ProjectDetailContent project={detailedProject} />
-  );
+  const detailedProject = project as DetailedProject;
+
+  // Send the fetched data to the Client Component for rendering
+  return <ProjectDetailContent project={detailedProject} />;
 }

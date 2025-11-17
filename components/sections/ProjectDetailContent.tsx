@@ -6,6 +6,7 @@ import { DetailedProject } from '@/lib/types';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaGithub, FaLink, FaTools } from 'react-icons/fa';
+import { ImageGallery } from './ImageGallery';
 
 // Varian animation for the entire page
 const pageVariants:any = {
@@ -75,7 +76,7 @@ export const ProjectDetailContent = ({ project }: ProjectDetailContentProps) => 
                 )}
             </motion.div>
 
-            {/* Case Study Details */} // 
+            {/* Case Study Details */} 
             <div className="space-y-12">
                 
                 {/* Full Description*/}
@@ -126,6 +127,13 @@ export const ProjectDetailContent = ({ project }: ProjectDetailContentProps) => 
                         ))}
                     </div>
                 </motion.section>
+
+                {/* Gallery Section */}
+                {project.galleryImages && project.galleryImages.length > 0 && (
+                  <motion.div variants={sectionItem}>
+                    <ImageGallery images={project.galleryImages} title="Gallery" />
+                  </motion.div>
+                )}
             </div>
             
         </motion.article>
