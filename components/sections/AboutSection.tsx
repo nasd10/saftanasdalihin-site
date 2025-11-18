@@ -77,7 +77,7 @@ export const AboutSection = () => {
               Start a Project
             </Link>
              <a
-              href="/CV.pdf"
+              href="/Safta-Nasdalihin-CV.pdf"
               download
               className="flex items-center gap-2 rounded-md border border-border bg-secondary 
                          px-6 py-3 font-semibold text-secondary-foreground 
@@ -92,11 +92,11 @@ export const AboutSection = () => {
         <div className="lg:w-1/3 flex justify-center lg:justify-end">
           <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-primary/50 shadow-2xl">
             <Image
-              src="/images/profile.jpg" 
+              src="/images/safta-profile.png" 
               alt="Professional Profile Picture of Safta Nasdalihin"
               layout="fill"
               objectFit="cover"
-              className="transition-transform duration-500 hover:rotate-1 hover:scale-105" // Efek unik
+              className="transition-transform duration-500 hover:rotate-1 hover:scale-105"
               priority 
             />
           </div>
